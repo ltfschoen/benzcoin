@@ -54,7 +54,7 @@ window.App = {
     var benz;
     BenzCoin.deployed().then(function(instance) {
       benz = instance;
-      return benz.getBalance.call(account, {from: account});
+      return benz.balanceOf.call(account, {from: account});
     }).then(function(value) {
       var balance_element = document.getElementById("balance");
       balance_element.innerHTML = value.valueOf();
@@ -76,7 +76,7 @@ window.App = {
     var benz;
     BenzCoin.deployed().then(function(instance) {
       benz = instance;
-      return benz.sendCoin(receiver, amount, {from: account});
+      return benz.transfer(receiver, amount, {from: sender});
     }).then(function() {
       self.setStatus("Transaction complete!");
       self.refreshBalance();

@@ -1,10 +1,13 @@
+var Owned = artifacts.require("./Owned.sol");
 var ConvertLib = artifacts.require("./ConvertLib.sol");
-var MetaCoin = artifacts.require("./BenzCoin.sol");
+var BenzCoin = artifacts.require("./BenzCoin.sol");
 
 module.exports = function(deployer, network, accounts) {
+  deployer.deploy(Owned);
+  deployer.link(Owned, BenzCoin);
   deployer.deploy(ConvertLib);
-  deployer.link(ConvertLib, MetaCoin);
-  deployer.deploy(MetaCoin);
+  deployer.link(ConvertLib, BenzCoin);
+  deployer.deploy(BenzCoin);
   if (network == "live") {
     // TODO
   }
