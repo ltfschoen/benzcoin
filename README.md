@@ -30,13 +30,13 @@ BenzCoin will initially become a usable and transactable oil asset backed token
 	* Configure Blockchain, Compile and Deploy Contract
 
 	  * Run Ethereum Client (in separate Terminal tab)
-	  	* Create DB folder
-				```
-				mkdir db && mkdir db/chain_database
-				```
 			* Delete DB folder if starting fresh
 				```
 				rm -rf ./db
+				```
+	  	* Create DB folder
+				```
+				mkdir db && mkdir db/chain_database
 				```
 			* Start Ethereum Blockchain Protocol Node Simulation
 				```

@@ -1,4 +1,4 @@
-var Owned = artifacts.require("./lib/Owned.sol");
+var Owned = artifacts.require("./Owned.sol");
 var ConvertLib = artifacts.require("./lib/ConvertLib.sol");
 var BenzCoin = artifacts.require("./BenzCoin.sol");
 

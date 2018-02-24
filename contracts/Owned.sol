@@ -1,6 +1,6 @@
 pragma solidity ^0.4.17;
 
-contract OwnedLib {
+contract Owned {
     address public owner;
 
     modifier onlyOwner {
@@ -8,7 +8,7 @@ contract OwnedLib {
       _;
     }
 
-    function OwnedLib() public { 
+    function Owned() public { 
       owner = msg.sender;
     }
 }

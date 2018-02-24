@@ -1,10 +1,10 @@
 pragma solidity ^0.4.17;
 
-import "./lib/OwnedLib.sol";
+import "./Owned.sol";
 import "./lib/ConvertLib.sol";
 import "./interface/ERC20Interface.sol";
 
-contract BenzCoin is ERC20Interface, OwnedLib {
+contract BenzCoin is ERC20Interface, Owned {
   string public constant symbol = "BXX";
   string public constant name = "Example Benz Token";
   uint8 public constant decimals = 0;
